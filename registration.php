@@ -33,8 +33,8 @@ require_once('config.php');
 					<label for="email"><b>Email Address</b></label>
 					<input class="form-control" id="email"  type="email" name="email" required>
 
-					<label for="phonenumber"><b>Phone Number</b></label>
-					<input class="form-control" id="phonenumber"  type="text" name="phonenumber" required>
+					<label for="phone"><b>Phone Number</b></label>
+					<input class="form-control" id="phone"  type="text" name="phone" required>
 
 					<label for="password"><b>Password</b></label>
 					<input class="form-control" id="password"  type="password" name="password" required>
@@ -59,7 +59,7 @@ require_once('config.php');
 			var firstname 	= $('#firstname').val();
 			var lastname	= $('#lastname').val();
 			var email 		= $('#email').val();
-			var phonenumber = $('#phonenumber').val();
+			var phone = $('#phone').val();
 			var password 	= $('#password').val();
 			
 
@@ -68,7 +68,7 @@ require_once('config.php');
 				$.ajax({
 					type: 'POST',
 					url: 'process.php',
-					data: {firstname: firstname,lastname: lastname,email: email,phonenumber: phonenumber,password: password},
+					data: {firstname: firstname,lastname: lastname,email: email,phone: phone,password: password},
 					success: function(data){
 					Swal.fire({
 								'title': 'Successful',
